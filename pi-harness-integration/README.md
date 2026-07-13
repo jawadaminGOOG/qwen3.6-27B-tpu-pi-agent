@@ -1,12 +1,10 @@
-# Pi Harness Integration with Qwen serving
+# Pi Agent Integration with Qwen serving
 
-This recipe documents how to configure the **Pi open-source terminal coding agent** ([pi.dev](https://pi.dev) / `@mariozechner/pi-coding-agent`) to connect directly to the optimized **`Qwen3.6-27B-FP8`** server running on Cloud TPU v6e.
+This recipe documents how to configure the **Pi open-source terminal coding agent** ([pi.dev](https://pi.dev) / `@mariozechner/pi-coding-agent`) to connect directly to the **`Qwen3.6-27B-FP8`** server running on Cloud TPU v6e.
 
-## Direct OpenAI API Integration (No Proxy Required)
+## Architecture
 
-Unlike Gemini-native tools, **Pi natively supports custom OpenAI-compatible API providers**. 
-
-Because vLLM exposes standard OpenAI-compatible endpoints (`/v1/chat/completions`), **no translation proxy layer is needed**. Pi connects directly to the vLLM serving endpoint on port `8000`.
+Pi connects directly to vLLM's standard OpenAI-compatible endpoints (`/v1/chat/completions`) on port `8000`:
 
 ```
 +--------------------+         OpenAI API (/v1)         +-----------------------+

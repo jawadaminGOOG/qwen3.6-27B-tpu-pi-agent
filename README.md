@@ -23,7 +23,7 @@ To make deployment, performance tuning, and harness integration modular, the rec
 
 ## 4. [Pi Harness Integration](pi-harness-integration/)
 * **Purpose:** Configuring the **Pi open-source terminal coding agent** ([pi.dev](https://pi.dev)) with local TPU Qwen serving.
-* **Focus:** Direct OpenAI API integration (explaining why **no proxy is required** for Pi due to native OpenAI provider support), configuring `~/.pi/agent/models.json` for custom endpoints, and session execution commands.
+* **Focus:** Direct OpenAI API integration, configuring `~/.pi/agent/models.json` for custom endpoints, and session execution commands.
 * **Path:** [pi-harness-integration/](pi-harness-integration/)
 
 ---
